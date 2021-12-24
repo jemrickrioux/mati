@@ -1,0 +1,14 @@
+syntax = "proto3";
+package jemrickrioux.mati.mati;
+
+import "gogoproto/gogo.proto";
+import "mati/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/jemrickrioux/mati/x/mati/types";
+
+// GenesisState defines the mati module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
